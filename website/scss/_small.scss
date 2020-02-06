@@ -18,3 +18,58 @@ body {
   max-width: 1200px;
   margin: 0 auto;
 }
+
+$navheightsmall: 55px;
+nav {
+  height: $navheightsmall;
+  background-color: green;
+  position: fixed;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 50px 1fr 50px 50px;
+  grid-gap: 10px;
+
+  .hamburger {
+    height: $navheightsmall;
+    width: 50px;
+    margin-left: 10px;
+    svg {
+      width: 100%;
+      height: $navheightsmall;
+    }
+  }
+
+  .menu {
+    display: none;
+    ul {
+      li {
+
+      }
+    }
+  }
+
+  .logo {
+    text-align: center;
+    font-size: 30px;
+    padding-top: 10px;
+    font-weight: bold;
+    width: 100%;
+  }
+
+  .cart {
+    width: 50px;
+    height: $navheightsmall;
+    svg {
+      width: 100%;
+      height: $navheightsmall;
+      padding: 5px;
+    }
+  }
+
+}
+
+
+// * HEADER
+header {
+  
+}

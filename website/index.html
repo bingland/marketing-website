@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="node_modules/flag-icon-css/css/flag-icon.css">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <title>Bike Shop Thing</title>
 </head>
@@ -12,7 +13,10 @@
 
     <!-- navigation -->
     <nav>
-        <ul>
+        <div class="hamburger">
+            <svg xmlns='http://www.w3.org/2000/svg' width='512' height='512' viewBox='0 0 512 512'><title>ionicons-v5-j</title><line x1='80' y1='160' x2='432' y2='160' style='fill:none;stroke:#000;stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px'/><line x1='80' y1='256' x2='432' y2='256' style='fill:none;stroke:#000;stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px'/><line x1='80' y1='352' x2='432' y2='352' style='fill:none;stroke:#000;stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px'/></svg>
+        </div>
+        <ul class="menu">
             <li>Get Started</li>
             <li>Products</li>
             <li>Shaving Tips</li>
@@ -20,16 +24,25 @@
             <li>Gifts</li>
         </ul>
         <!-- logo -->
+        <div class="logo">
+            Bike Shop
+        </div>
+
         <!-- login -->
         <!-- search -->
-        <!-- cart -->
-        <!-- flag -->
+        <div class="cart">
+            <svg xmlns='http://www.w3.org/2000/svg' width='512' height='512' viewBox='0 0 512 512'><title>ionicons-v5-d</title><circle cx='176' cy='416' r='16' style='fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px'/><circle cx='400' cy='416' r='16' style='fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px'/><polyline points='48 80 112 80 160 352 416 352' style='fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px'/><path d='M160,288H409.44a8,8,0,0,0,7.85-6.43l28.8-144a8,8,0,0,0-7.85-9.57H128' style='fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px'/></svg>
+        </div>
+        <span class="flag-icon flag-icon-us"></span>
     </nav>
 
     <!-- lander -->
     <header>
-        <h1>THE BIGGEST GAME CALLS FOR THE BEST SHAVE.</h1>
-        <h2>Shop all 32 teams and get ready for Super Bowl LIV with a personalized team razor</h2>
+        <div class="headerText">
+            <h1>There's a best for every man.</h1>
+            <p>Get everything you need to start looking and feeling your best when you subscribe to your favorite razor.</p>
+            <button>Shop now</button>
+        </div>
     </header>
 
     <section>
@@ -57,24 +70,68 @@
     <!-- tri section / carousel -->
     <section class="tri">
         <div class="triPanel">
-            <h2>Best blade on the market. I'm a long time customer.</h2>
-            <p>"Glad the subscription service is now available for the best blades on the market. Great value."</p>
-            <h3>Mark</h3>
-            <button>Shop now</button>
+            <div class="triText">
+                <h2>Best blade on the market. I'm a long time customer.</h2>
+                <p>"Glad the subscription service is now available for the best blades on the market. Great value."</p>
+                <h3>Mark</h3>
+                <button>Shop now</button>
+            </div>
         </div>
 
         <div class="triPanel">
-            <h2>How to trim a beard</h2>
-            <p>A little trimming allows for maximum impact. Gillette® has all the tips, tricks, and tools you need to make your beard a showstopper.</p>
-            <button>Learn more</button>
+            <div class="triText">
+                <h2>How to trim a beard</h2>
+                <p>A little trimming allows for maximum impact. Gillette® has all the tips, tricks, and tools you need to make your beard a showstopper.</p>
+                <button>Learn more</button>
+            </div>
         </div>
 
         <div class="triPanel">
-            <h2>King of Razors</h2>
-            <p>"This razor definitely does its job. The razor is very sharp and cuts cleanly and consistently leaving you very smooth. I absolutely love it."</p>
-            <h3>JTLang</h3>
-            <button>Shop now</button>
+            <div class="triText">
+                <h2>King of Razors</h2>
+                <p>"This razor definitely does its job. The razor is very sharp and cuts cleanly and consistently leaving you very smooth. I absolutely love it."</p>
+                <h3>JTLang</h3>
+                <button>Shop now</button>
+            </div>
+            
         </div>
     </section>
+
+    <!-- double section -->
+    <section class="bi">
+        <div class="biPanel">
+            <div class="biText">
+                <h2>The best a man can be</h2>
+                <button>Learn more</button>
+            </div>
+        </div>
+
+        <div class="biPanel">
+            <div class="biText">
+                <h3>Try our new innovation; the Heated Razor from GilletteLabs, available in limited quantities.</h3>
+                <button>Learn more</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="bullets">
+            <ul>
+                <li>About us</li>
+                <li>Refer a friend</li>
+                <li>Coupons</li>
+                <li>FAQs</li>
+                <li>Terms and Conditions</li>
+                <li>Privacy</li>
+                <li>Sitemap</li>
+                <li>Store Policy</li>
+                <li>Do Not Sell My Personal Data</li>
+            </ul>
+        </div>
+        <div class="icons">
+            <p>&copy; 2020 Brayden England</p>
+            <!-- icons for social media networks -->
+        </div>
+    </footer>
 </body>
 </html>
