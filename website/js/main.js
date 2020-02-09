@@ -1,13 +1,8 @@
 // get nav button
-const hamburger = document.querySelector('.hamburger')
+const hamburger = $('.hamburger')
 // get hiddenNav 
-const hiddenNav = document.querySelector('.hiddenNav')
+const hiddenNav = $('.hiddenNav')
 
-hamburger.addEventListener('click', function () {
-    console.log('hi')
-    console.log(hiddenNav.style.display)
-    if(hiddenNav.style.display == 'none') {
-        hiddenNav.style.display = 'block'
-        console.log('HIHIHI')
-    }
+hamburger.click(() => {
+    hiddenNav.toggle()
 })

@@ -24,6 +24,7 @@ $mainblue: #182E6E;
 $grey: #808285;
 $backgroundGrey: #5F5B5D;
 $backgroundWhite: #f9f9f9;
+$backgroundWhite2: #EFEFEF;
 
 $navheightsmall: 55px;
 nav {
@@ -35,6 +36,7 @@ nav {
   grid-template-columns: 50px auto 50px 50px;
   grid-gap: 10px;
   border-bottom: 1px solid rgba(168, 168, 168, 0.363);
+  z-index: 2348234727348327;
 
   .hamburger {
     height: $navheightsmall;
@@ -72,7 +74,7 @@ nav {
     svg {
       width: 100%;
       height: $navheightsmall;
-      padding: 5px;
+      padding: 7px;
     }
   }
 
@@ -88,18 +90,42 @@ nav {
 
   ul {
     width: 100%;
-    text-align: center;
+    max-width: 280px;
+    margin: 0 auto;
+    padding-top: 90px;
+
     li {
-      font-size: 40px;
+      font-size: 38px;
       text-transform: uppercase;
       padding: 20px 0;
+      color: $mainblue;
     }
   }
 
   .bottomBar {
     position: fixed;
     bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background-color: $backgroundWhite2;
 
+    .barItem {
+      padding: 20px;
+
+      img {
+        width: 30px;
+        display: inline-block;
+      }
+      h2 {
+        color: $grey;
+        font-size: 18px;
+        //font-weight: bold;
+        display: inline-block;
+        position: relative;
+        top: -7px;
+      }
+    }
   }
 }
 
@@ -163,10 +189,10 @@ header {
   .stepGrid {
     .step {
       max-width: 330px;
-      margin: 0 auto;
+      margin: 30px auto;
 
       .stepImage {
-        max-width: 200px;
+        max-width: 100px;
       }
       h2 {
         font-size: 16px;
@@ -175,12 +201,13 @@ header {
         color: $mainblue;
       }
       p {
-        padding: 20px;
+        padding: 0 20px;
         line-height: 1.5;
         font-size: 16px;
       }
       .downArrow {
         max-width: 40px;
+        margin: 10px;
       }
     }
 
@@ -202,7 +229,9 @@ header {
     background-color: grey;
     color: white;
     height: 600px;
-    background-size: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 
 
     .triText {
@@ -243,10 +272,12 @@ header {
   .biPanel {
     height: 650px;
     position: relative;
-    background-size: 100%;
-
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    
     .biText {
-      background-color: grey;
+      background-color: rgba(0, 0, 0, 0.7);
       height: 200px;
       position: absolute;
       bottom: 0;
@@ -258,18 +289,18 @@ header {
         font-size: 30px;
         text-transform: uppercase;
         padding: 25px;
+        font-style: italic;
       }
       h3 {
         font-size: 16px;
         padding: 25px;
-        text-decoration: underline;
         line-height: 1.2;
       }
       button {
         width: 300px;
         background-color: rgba(0, 0, 0, 0);
         padding: 20px;
-        font-size: 20px;
+        font-size: 16px;
         border: 1px solid white;
         color: white;
         text-transform: uppercase;
