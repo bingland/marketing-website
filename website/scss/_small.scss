@@ -15,7 +15,7 @@ body {
 }
 
 .wrapper {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
 }
 
@@ -27,57 +27,63 @@ $backgroundWhite: #f9f9f9;
 $backgroundWhite2: #EFEFEF;
 
 $navheightsmall: 55px;
+$navheight: 96px;
 nav {
   height: $navheightsmall;
   background-color: white;
+  border-bottom: 1px solid rgba(168, 168, 168, 0.363);
+  z-index: 2348234727348327; // yes, i'm that lazy :)
   position: fixed;
   width: 100%;
-  display: grid;
-  grid-template-columns: 50px auto 50px 50px;
-  grid-gap: 10px;
-  border-bottom: 1px solid rgba(168, 168, 168, 0.363);
-  z-index: 2348234727348327;
 
-  .hamburger {
-    height: $navheightsmall;
-    width: 50px;
-    margin-left: 10px;
-    svg {
-      width: 100%;
+  .wrapper {
+    display: grid;
+    grid-template-columns: 50px auto 50px 50px;
+    grid-gap: 10px;
+    height: 100%;
+    
+
+    .hamburger {
       height: $navheightsmall;
+      width: 50px;
+      margin-left: 10px;
+      svg {
+        width: 100%;
+        height: $navheightsmall;
+      }
     }
-  }
 
-  .menu {
-    display: none;
-    ul {
+    .menu {
+      display: none;
+      align-items: center;
+      height: 100%;
       li {
+        text-transform: uppercase;
+        padding: 0 15px;
+      }
+    }
 
+    .logo {
+      text-align: center;
+      font-size: 30px;
+      padding-top: 10px;
+      font-weight: bold;
+      width: 100%;
+      img {
+        max-height: 35px;
+      }
+    }
+
+    .cart {
+      width: 50px;
+      height: $navheightsmall;
+      svg {
+        width: 100%;
+        height: $navheightsmall;
+        padding: 7px;
       }
     }
   }
-
-  .logo {
-    text-align: center;
-    font-size: 30px;
-    padding-top: 10px;
-    font-weight: bold;
-    width: 100%;
-    img {
-      max-height: 35px;
-    }
-  }
-
-  .cart {
-    width: 50px;
-    height: $navheightsmall;
-    svg {
-      width: 100%;
-      height: $navheightsmall;
-      padding: 7px;
-    }
-  }
-
 }
 
 // * HIDDEN NAV
@@ -135,13 +141,14 @@ header {
   background-color: white;
   //height: 650px;
   width: 100%;
-  //position: relative;
+  position: relative;
   display: block;
   z-index: -99999;
   text-align: center;
   margin-bottom: 40px;
+  top: $navheightsmall;
 
-  img {
+  .headerImage img {
     width: 100%;
   }
 
@@ -211,15 +218,15 @@ header {
         margin: 10px;
       }
     }
-
-    button {
-      width: 300px;
-      background-color: white;
-      padding: 20px;
-      font-size: 20px;
-      text-transform: uppercase;
-      border: 1px solid black;
-    }
+  }
+  button {
+    width: 300px;
+    background-color: white;
+    padding: 20px;
+    font-size: 20px;
+    text-transform: uppercase;
+    border: 1px solid $mainblue;
+    color: $mainblue;
   }
 }
 
@@ -244,9 +251,10 @@ header {
       bottom: 0;
       height: 300px;
       background-color: $backgroundGrey;
-      text-align: center; 
+      text-align: left; 
       display: grid;
       align-content: center;
+      width: 100%;
 
       h2 {
         font-size: 24px;
@@ -264,7 +272,7 @@ header {
         font-weight: bold;
       }
       button {
-        width: 300px;
+        width: 280px;
         background-color: rgba(0, 0, 0, 0);
         padding: 20px;
         font-size: 20px;
@@ -281,7 +289,7 @@ header {
 
 .bi {
   .biPanel {
-    height: 650px;
+    height: 550px;
     width: 100%;
     position: relative;
     background-size: cover;
@@ -289,7 +297,7 @@ header {
     background-position: center;
     
     .biText {
-      background-color: rgba(0, 0, 0, 0.7);
+      background-color: rgba(0, 0, 0, 0.5);
       height: 200px;
       position: absolute;
       bottom: 0;
@@ -309,10 +317,10 @@ header {
         line-height: 1.2;
       }
       button {
-        width: 300px;
+        width: 280px;
         background-color: rgba(0, 0, 0, 0);
         padding: 20px;
-        font-size: 16px;
+        font-size: 18px;
         border: 1px solid white;
         color: white;
         text-transform: uppercase;
@@ -322,37 +330,45 @@ header {
 }
 
 footer {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  color: $mainblue;
   background-color: $backgroundWhite2;
-  padding: 20px 0;
 
-  .bullets {
-    ul {
-      margin-left: 30px;
-
-      li {
-        list-style-type: disc;
-        font-size: 14px;
-        line-height: 1.2;
-        padding: 3px 0;
+  .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    color: $mainblue;
+    padding: 20px 0;
+  
+    .bullets {
+      ul {
+        margin-left: 30px;
+  
+        li {
+          list-style-type: disc;
+          font-size: 14px;
+          line-height: 1.2;
+          padding: 3px 0;
+        }
       }
     }
-  }
-  .other {
-    text-align: center;
-    p {
-
-    }
-    
-    .icons {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      justify-content: space-between;
-      padding: 20px 0;
-      .iconContainer {
-        padding: 10px;
+    .other {
+      text-align: right;
+  
+      p {
+        padding: 30px;
+      }
+      
+      .icons {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        justify-content: space-between;
+        padding: 20px 0;
+        max-width: 235px;
+        margin: 0 10px 0 auto;
+  
+        .iconContainer {
+          padding: 10px;
+          max-width: 50px;
+        }
       }
     }
   }
